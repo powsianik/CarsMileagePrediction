@@ -21,5 +21,7 @@ namespace CarsMileagePrediction
         public static FileInfo EncogAnalystFile = new FileInfo(Path.Combine(BasePath.DirectoryName, "AutoMPG_EncogAnalyst.ega"));
 
         public static FileInfo NetworkFile = new FileInfo(Path.Combine(BasePath.DirectoryName, "AutoMPG_Network.eg"));
+
+        public static FileInfo ValidationResults = new FileInfo(Path.Combine(BasePath.DirectoryName, "AutoMPG_ValidationResults.csv"));
     }
 }
