@@ -1,6 +1,5 @@
 ﻿using System;
 using CarsMileagePrediction.Steps;
-using IrisPlantClassification.Steps;
 
 namespace CarsMileagePrediction
 {
@@ -11,6 +10,9 @@ namespace CarsMileagePrediction
             Step1();
             Step2();
             Step3();
+            Step4();
+
+            Console.ReadKey();
         }
 
         static void Step1()
@@ -33,6 +35,13 @@ namespace CarsMileagePrediction
             DataNormalizer normalizer = new DataNormalizer();
             normalizer.Normalize(DataFilesInfoGetter.BaseFile, DataFilesInfoGetter.TrainingFile, DataFilesInfoGetter.NormalizedTrainingFile, DataFilesInfoGetter.EvaluateFile,
                 DataFilesInfoGetter.NormalizedEvaluateFile, DataFilesInfoGetter.EncogAnalystFile);
+        }
+
+        static void Step4()
+        {
+            Console.WriteLine("STEP 4: Create neural network...");
+            NetworkCreator networkCreator = new NetworkCreator();
+            networkCreator.Create(DataFilesInfoGetter.NetworkFile);
         }
     }
 }

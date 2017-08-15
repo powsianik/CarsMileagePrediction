@@ -5,7 +5,7 @@ using Encog.App.Analyst.Wizard;
 using Encog.Util.Arrayutil;
 using Encog.Util.CSV;
 
-namespace IrisPlantClassification.Steps
+namespace CarsMileagePrediction.Steps
 {
     public class DataNormalizer
     {
