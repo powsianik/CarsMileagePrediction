@@ -11,6 +11,7 @@ namespace CarsMileagePrediction
             Step2();
             Step3();
             Step4();
+            Step5();
 
             Console.ReadKey();
         }
@@ -42,6 +43,13 @@ namespace CarsMileagePrediction
             Console.WriteLine("STEP 4: Create neural network...");
             NetworkCreator networkCreator = new NetworkCreator();
             networkCreator.Create(DataFilesInfoGetter.NetworkFile);
+        }
+
+        static void Step5()
+        {
+            Console.WriteLine("STEP 5: Train neural network...");
+            NetworkTrainer networkteTrainer = new NetworkTrainer();
+            networkteTrainer.Train(DataFilesInfoGetter.NetworkFile, DataFilesInfoGetter.NormalizedTrainingFile);
         }
     }
 }
